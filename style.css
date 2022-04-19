@@ -1,6 +1,25 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
+} */
+
+#addButton {
+}
+
+#editForm {
+  visibility: hidden;
+}
+
+.editButton {
+}
+
+.deleteButton {
+}
+
+#confirmButton {
+}
+
+#cancelButton {
 }
