@@ -1,25 +1,151 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
-} */
+}
+
+:root {
+  /* using CSS variables makes the website
+  easy to edit and modify when we need to. */
+  --font-family: "M PLUS 1", sans-serif;
+}
+
+body {
+  background-color: #374151;
+  font-family: var(--font-family);
+  color: #fff;
+}
+
+header {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: gray;
+  margin-bottom: 1rem;
+}
+
+main {
+  flex: 1 1 0%;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
 
 #addButton {
+  color: pink;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#addButton:hover {
+  opacity: 0.8;
+}
+
+#addButton:active {
+  opacity: 0.6;
 }
 
 #editForm {
   visibility: hidden;
+  flex: 1 1 0%;
+  background: gray;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: white;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#editForm::placeholder {
+  color: gray;
 }
 
 .editButton {
+  margin-left: 100px;
+  width: 90px;
+  height: 40px;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-top: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: background-color 0.5s;
+}
+
+.editButton:hover,
+a.btn:hover,
+input[type="submit"]:hover {
+  background-color: #fff;
+  color: #66545e;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .deleteButton {
+  margin-left: 20px;
+  width: 90px;
+  height: 40px;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-top: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: background-color 0.5s;
+}
+
+.deleteButton:hover,
+a.btn:hover,
+input[type="submit"]:hover {
+  background-color: #fff;
+  color: #66545e;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 #confirmButton {
 }
 
 #cancelButton {
+}
+
+#todoList {
+  padding: 1rem;
+  list-style: none;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  background-color: #1f2937;
+  font-size: 20px;
+}
+
+#todoList h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: gray;
+  margin-bottom: 1rem;
 }

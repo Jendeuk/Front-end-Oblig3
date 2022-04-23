@@ -1,14 +1,16 @@
+// Todo
+// Get todolist related DOM elements.
 const editFormElement = document.getElementById("editForm");
 const editBoxElement = document.getElementById("editBox");
 const addButtonElement = document.getElementById("addButton");
 const confirmButtonElement = document.getElementById("confirmButton");
 const cancelButtonElement = document.getElementById("cancelButton");
 
-const listItems = ["Item #1", "Item #2", "Item #3", "Item #4", "Item #5"];
+const listItems = ["Homework", "Take a walk", "Workout", "Hiking", "Nap"];
 
 function updateList() {
-  hideEditForm();
-  const newtodoListElement = document.createElement("ul");
+  hideEditForm(); //running the hidden edit form
+  const newtodoListElement = document.createElement("ul"); //
   newtodoListElement.id = "todoList";
   newtodoListElement.addEventListener("click", listClickedHandler);
   listItems.forEach((item, i) => {
@@ -42,6 +44,7 @@ function showEditForm() {
 function confirmEdit() {
   const itemId = editBoxElement.dataset.itemId;
   const newItem = editBoxElement.value.trim();
+  //If the you dont fill in the input box, u will reserve an alert messege
   if (newItem === "") {
     alert("Item can't be empty");
     return;
@@ -83,7 +86,7 @@ function listClickedHandler(event) {
     if (editBoxElement.dataset.itemId) {
       hideEditForm();
     }
-    itemElement.style.backgroundColor = "yellow";
+    itemElement.style.backgroundColor = "#b6b8ba";
     editBoxElement.dataset.itemId = itemId;
     editBoxElement.value = listItems[itemId];
     showEditForm();
