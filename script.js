@@ -84,7 +84,6 @@ function listClickedHandler(event) {
   const { target } = event;
   if (target.classList.contains("deleteButton")) {
     const itemElement = target.parentNode;
-    // itemElement.style.backgroundColor = "red";
     /** Implementation of the task I. 1. a)  dialog that ask the user to confirm before the item is deleted */
     const itemId = itemElement.dataset.itemId;
     if (
@@ -101,8 +100,8 @@ function listClickedHandler(event) {
     if (editBoxElement.dataset.itemId) {
       hideEditForm();
     }
-    //Adding background for item element where the user press and the
-    itemElement.style.backgroundColor = "rgb(65 80 94)";
+
+    itemElement.style.backgroundColor = "rgb(65 80 94)"; //using style.backgroundColor to add background for item element where the user press and the
     editBoxElement.dataset.itemId = itemId;
     editBoxElement.value = listItems[itemId];
     showEditForm(); //running the edit form when it shows
