@@ -22,6 +22,7 @@ header {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  text-align: center;
 }
 
 header h1 {
@@ -48,25 +49,34 @@ button {
 }
 
 #addButton {
-  color: pink;
-  font-size: 1.25rem;
+  margin-left: 100px;
+  width: 90px;
+  height: 40px;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  margin-right: 100px;
+  margin-top: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: background-color 0.5s;
+  background: #1f2937;
+}
+
+#addButton:hover,
+a.btn:hover,
+input[type="submit"]:hover {
+  background-color: #fff;
+  color: #374151;
   font-weight: 700;
   cursor: pointer;
-  transition: 0.4s;
-}
-
-#addButton:hover {
-  opacity: 0.8;
-}
-
-#addButton:active {
-  opacity: 0.6;
 }
 
 #editForm {
   visibility: hidden;
   flex: 1 1 0%;
-  background: gray;
+  background: #1f2937;
   padding: 1rem;
   border-radius: 1rem;
   margin-right: 1rem;
@@ -78,6 +88,14 @@ button {
 
 #editForm::placeholder {
   color: gray;
+}
+
+#editBox {
+  color: white;
+  font-size: 20px;
+  background: #303a47;
+  padding: 10px;
+  border-radius: 1rem;
 }
 
 .editButton {
@@ -99,7 +117,7 @@ button {
 a.btn:hover,
 input[type="submit"]:hover {
   background-color: #fff;
-  color: #66545e;
+  color: #374151;
   font-weight: 700;
   cursor: pointer;
 }
@@ -123,15 +141,57 @@ input[type="submit"]:hover {
 a.btn:hover,
 input[type="submit"]:hover {
   background-color: #fff;
-  color: #66545e;
+  color: #374151;
   font-weight: 700;
   cursor: pointer;
 }
 
 #confirmButton {
+  margin-left: 20px;
+  width: 90px;
+  height: 40px;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-top: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: background-color 0.5s;
+}
+
+#confirmButton:hover,
+a.btn:hover,
+input[type="submit"]:hover {
+  background-color: #fff;
+  color: #374151;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 #cancelButton {
+  margin-left: 20px;
+  width: 90px;
+  height: 40px;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-top: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: background-color 0.5s;
+}
+
+#cancelButton:hover,
+a.btn:hover,
+input[type="submit"]:hover {
+  background-color: #fff;
+  color: #374151;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 #todoList {
